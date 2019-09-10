@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import Musicplayer from './Musicplayer'
 import SongCollection from './SongCollection'
@@ -11,7 +11,7 @@ class App extends React.Component {
   state = {
     allSongs: [],
     currentUser: "",
-    currentSong: "",
+    currentSong: {},
   }
 
   componentDidMount() {
@@ -23,8 +23,8 @@ class App extends React.Component {
   }
 
   playSong = (song) => {
-    // console.log(song.path)
-    this.setState({ currentSong: song.path })
+    // console.log(song)
+    this.setState({ currentSong: song })
   }
 
   render() {

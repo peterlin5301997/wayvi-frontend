@@ -10,7 +10,7 @@ class SongCollection extends React.Component {
     })
 
     return (
-      <div>
+      <div id="SongCollection">
         {allSongs}
       </div>
     )

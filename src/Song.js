@@ -6,10 +6,10 @@ class Song extends React.Component {
     // console.log(this.props.playSong)
     return (
       <div onClick={() => this.props.playSong(this.props.songInfo)} className="song" >
-        <p>Name: {this.props.songInfo.name}</p>
-        <p>Artist: {this.props.songInfo.artist_name}</p>
-        <p>Genre: {this.props.songInfo.genre}</p>
-        <p>Year: {this.props.songInfo.year}</p>
+        <p>{this.props.songInfo.name}</p>
+        <p>{this.props.songInfo.artist_name}</p>
+        <p>{this.props.songInfo.genre}</p>
+        <p>{this.props.songInfo.year}</p>
       </div>
     )
   }

@@ -1,5 +1,13 @@
 html {
-  background-color: black;
+  background-color: rgb(15,15,15);
+  margin-bottom: 4em;
+}
+
+audio {
+  float: right;
+  outline: none;
+  padding-right: 10em;
+  width: 40%;
 }
 
 .App {
@@ -8,15 +16,51 @@ html {
 
 .song {
   color: white;
+  height: 15em;
+  width: 15em;
+  padding: 1em;
+  margin: 1em;
+  border: solid 0.1em;
+  float: left;
+  transition: 0.3s
 }
 
 .song:hover {
-  color: yellow;
+  color: teal;
+  background-color: rgb(10,10,10);
   cursor: pointer;
+  transform: scale(1.05);
+}
+
+.songTitle {
+  font-weight: bold;
+}
+
+.songArtist {
+  font-size: 0.8em;
 }
 
 #title {
   color: teal;
+  font-size: 5em;
+}
+
+#SongCollection {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#songInfo {
+  float: left;
+  width: 30%;
+  padding-left: 5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  text-align: left;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 #musicplayer {
@@ -24,4 +68,6 @@ html {
   position: fixed;
   bottom: 0;
   width: 100%;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }

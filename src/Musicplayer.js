@@ -3,17 +3,19 @@ import React from 'react'
 class Musicplayer extends React.Component {
 
   componentDidUpdate() {
-    this.refs.player.pause();
     this.refs.player.load();
-    this.refs.player.play();
   }
 
   render() {
-    console.log(this.props.currentSong)
+    // console.log(this.props.currentSong)
     return (
       <div id="musicplayer">
-        <audio controls ref="player">
-          <source src={this.props.currentSong} type="audio/mp3"/>
+        <div id="songInfo">
+          <span className="songTitle">{this.props.currentSong.name}</span> <br/>
+          <span className="songArtist">{this.props.currentSong.artist_name}</span>
+        </div>
+        <audio controls autoPlay ref="player">
+          <source src={this.props.currentSong.path} type="audio/mp3"/>
         </audio>
       </div>
     )
