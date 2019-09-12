@@ -1,23 +1,48 @@
 html {
   background-color: rgb(15,15,15);
-  margin-bottom: 4em;
+  margin-bottom: 5em;
 }
 
 audio {
-  float: right;
   outline: none;
-  padding-right: 10em;
   width: 40%;
+}
+
+input {
+  height: 2em;
+  width: 100%;
+}
+
+button {
+  height: 3em;
+  width: 5em;
+  border-radius: 2em;
+  background-color: black;
+  color: teal;
+  font-size: 0.8em;
+  font-weight: bold;
+  margin-left: 1em;
+  margin-right: 1em;
+  outline: none;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: teal;
+  color: white;
+  cursor: pointer;
 }
 
 .App {
   text-align: center;
+  box-sizing: content-box;
+  cursor: default;
 }
 
 .song {
   color: white;
-  height: 15em;
-  width: 15em;
+  height: 14em;
+  width: 14em;
   padding: 1em;
   margin: 1em;
   border: solid 0.1em;
@@ -28,7 +53,6 @@ audio {
 .song:hover {
   color: teal;
   background-color: rgb(10,10,10);
-  cursor: pointer;
   transform: scale(1.05);
 }
 
@@ -40,27 +64,94 @@ audio {
   font-size: 0.8em;
 }
 
+.songDetail {
+  height: 70%;
+  width: 100%;
+}
+
+.special-songs {
+  float: left;
+}
+
+.special-songs > p {
+  color: teal;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 1em;
+}
+
+.playlist:hover {
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.submit {
+  height: 2.5em;
+  width: 100%;
+  border-radius: 2em;
+  margin-top: 1em;
+  background-color: black;
+  color: teal;
+  font-size: 1em;
+  font-weight: bold;
+  outline: none;
+}
+
+.submit:hover {
+  transition: 0.3s;
+  background-color: teal;
+  color: white;
+  cursor: pointer;
+}
+
+.player-btn {
+  background-color: white;
+  height: 2em;
+  width: 2em;
+  margin-top: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+  float: left;
+}
+
 #title {
   color: teal;
   font-size: 5em;
+  margin-left: 15%;
+}
+
+#sidebar {
+  height: 100%;
+  width: 12%;
+  float: left;
+  position: fixed;
+  text-align: left;
+  line-height: 2em;
+  cursor: default;
+}
+
+#user {
+  margin-left: 1em;
 }
 
 #SongCollection {
-  width: 90%;
-  margin-left: auto;
+  margin-left: 17%;
   margin-right: auto;
 }
 
 #songInfo {
   float: left;
   width: 30%;
-  padding-left: 5em;
+  margin-left: 5em;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   text-align: left;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  line-height: normal;
 }
 
 #musicplayer {
@@ -68,6 +159,6 @@ audio {
   position: fixed;
   bottom: 0;
   width: 100%;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
