@@ -4,22 +4,22 @@ import UserInfo from './UserInfo';
 
 class Sidebar extends Component {
 
-  constructor(props) {
-    super(props)
-  }
-
   render() {
+    // console.log(this.props)
     return (
       <div className="tile is-2 is-parent">
-        <article className="tile is-child notification has-background-black">
+        <article id="sidebar" className="tile is-child notification has-background-black">
           <div className="content has-text-grey-light">
-            <p>Playlists</p>
-            <p>Wedding</p>
-            <p>Funeral</p>
-            <p>Birthday</p>
           </div>
-            <Login />
-            <UserInfo />
+            {
+              this.props.user ?
+              <UserInfo
+                user={this.props.user}
+                playlists={this.props.playlists}
+                showPlaylist={this.props.showPlaylist}
+                addPlaylist={this.props.addPlaylist} /> :
+              <Login login={this.props.login} />
+            }
         </article>
       </div>
     );
